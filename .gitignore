@@ -1,0 +1,65 @@
+# ==========================================
+# Python Byte-compiled / optimized files
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ==========================================
+# Django Specific Files & Folders
+# ==========================================
+# Local database (SQLite)
+*.sqlite3
+
+# User-uploaded media and collected static assets
+media/
+staticfiles/
+
+# Logs
+*.log
+
+# ==========================================
+# Environments and Dependencies
+# ==========================================
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+pyenv/
+
+# Pipenv or Poetry files (if you prefer locking dependencies without local exports)
+.poetry/
+
+# Secret / Environment variable files
+.env
+.secrets
+
+# ==========================================
+# Testing and Coverage
+# ==========================================
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.pdf_cache
+.pytest_cache/
+
+# ==========================================
+# IDE and OS Specific Files
+# ==========================================
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# JetBrains (PyCharm)
+.idea/
+
+# VS Code
+.vscode/
