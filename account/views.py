@@ -1,4 +1,5 @@
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 
@@ -24,3 +25,8 @@ def user_login(request: HttpRequest):
     else:
         form = LoginForm()
     return render(request, "account/login.html", {"form": form})
+
+
+@login_required
+def dashboard(request: HttpRequest):
+    return render(request, "account/dashboard.html", {"section": "dashboard"})

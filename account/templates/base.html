@@ -7,31 +7,31 @@
 </head>
 <body>
   <div id="header">
-    <span class="logo">Закладки</span>
-    {% comment %} {% if request.user.is_authenticated %}
+    <span class="logo">Bookmarks</span>
+    {% if request.user.is_authenticated %}
       <ul class="menu">
         <li {% if section == "dashboard" %}class="selected"{% endif %}>
-          <a href="{% url "dashboard" %}">Мой дашборд</a>
+          <a href="{% url "dashboard" %}">My dashboard</a>
         </li>
         <li {% if section == "images" %}class="selected"{% endif %}>
-          <a href="#">Изображения</a>
+          <a href="#">Images</a>
         </li>
         <li {% if section == "people" %}class="selected"{% endif %}>
-          <a href="#">Люди</a>
+          <a href="#">People</a>
         </li>
       </ul>
     {% endif %}
     <span class="user">
       {% if request.user.is_authenticated %}
-        Привет {{ request.user.first_name|default:request.user.username }},
+        Hello {{ request.user.first_name|default:request.user.username }},
         <form action="{% url "logout" %}" method="post">
-          <button type="submit">Выйти</button>
+          <button type="submit">Logout</button>
           {% csrf_token %}
         </form>
       {% else %}
-        <a href="{% url "login" %}">Войти</a>
+        <a href="{% url "login" %}">Log-in</a>
       {% endif %}
-    </span> {% endcomment %}
+    </span>
   </div>
   <div id="content">
     {% block content %}
